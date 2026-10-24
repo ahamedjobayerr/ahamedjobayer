@@ -223,6 +223,659 @@
       margin-bottom: 0;
     }
 
+    .publication-intro {
+      color: var(--muted);
+      font-size: 14px;
+      margin: -8px 0 18px;
+    }
+
+    .policy-articles .item {
+      margin-bottom: 0;
+      padding: 0 0 13px;
+      margin-top: 13px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .policy-articles .item:first-of-type {
+      margin-top: 0;
+    }
+
+    .policy-articles .item:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .policy-articles .item h3 {
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.6;
+      margin-bottom: 2px;
+    }
+
+    .policy-articles .item h3 a {
+      text-decoration: none;
+    }
+
+    .subsection-title {
+      margin-bottom: 20px;
+    }
+
+    .item h3 a {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .item h3 a:hover,
+    .item p a:hover {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .publication-link {
+      font-size: 13px;
+      margin-top: -8px;
+    }
+
+    .publication-link a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    footer {
+      padding-block: 28px 38px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    @media (max-width: 700px) {
+      .container {
+        width: min(100% - 36px, var(--max-width));
+      }
+
+      .nav {
+        justify-content: center;
+        gap: 12px 18px;
+      }
+
+      .nav a {
+        font-size: 13px;
+      }
+
+      .theme-toggle {
+        width: 36px;
+        height: 36px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding-block: 40px;
+      }
+
+      .portrait {
+        max-width: 220px;
+      }
+
+      h1 {
+        font-size: 40px;
+        letter-spacing: -1.7px;
+      }
+
+      section {
+        padding-block: 30px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      body {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="#academic-profile">Academic Profile</a>
+      <a href="#publications">Publications</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+
+      <button
+        class="theme-toggle"
+        id="themeToggle"
+        type="button"
+        aria-label="Switch colour theme"
+        title="Switch colour theme"
+      >◐</button>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="name">
+      <div>
+        <img
+          class="portrait"
+          src="ahamedjobayer.png"
+          alt="Portrait of Ahamed Jobayer"
+          width="600"
+          height="800"
+        >
+      </div>
+
+      <div>
+        <h1 id="name">Ahamed Jobayer</h1>
+        <p class="focus">Researcher</p>
+
+        <p class="intro">
+          I bring an interdisciplinary perspective to understanding
+          contemporary political and social realities, shaped by both
+          the academic community I am part of and my experience in the
+          non-profit development sector. I seek to connect critical
+          inquiry with real-world challenges. Beyond these, I enjoy
+          photography, capturing overlooked details and discovering
+          new perspectives in everyday life.
+        </p>
+
+        <div class="hero-links">
+          <a href="#publications">Publications ↓</a>
+          <a href="CV.pdf" download>Download CV ↓</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Academic Profile -->
+    <section id="academic-profile">
+      <h2>Academic Profile</h2>
+
+      <div class="item">
+        <h3>Education</h3>
+
+        <div class="item">
+          <h3>Master’s Degree in International Relations</h3>
+          <p class="meta">
+            South Asian University, New Delhi · 2024–2026
+          </p>
+          <p class="meta">SAARC Freeship Scholar</p>
+          <p class="meta">
+            <b>Thesis:</b>
+            <em>Rohingya At/As Risk in Bangladesh: Analyzing Climate
+            Discourse in Select Newspapers</em>
+          </p>
+        </div>
+
+        <div class="item">
+          <h3>Bachelor of Laws (LL.B. Honours)</h3>
+          <p class="meta">
+            Green University of Bangladesh · 2019–2023
+          </p>
+          <p class="meta">
+            CETL Brightest Mind Scholar · Spring 2022
+          </p>
+          <p class="meta">
+            Dean’s Certificate for Academic Excellence · Summer 2022
+          </p>
+        </div>
+      </div>
+
+      <div class="item">
+        <h3>Research Interests</h3>
+        <ul class="tag-list">
+          <li>Refugee &amp; Migration Governance</li>
+          <li>Security Studies</li>
+          <li>Climate Change</li>
+          <li>Geopolitics</li>
+          <li>Political Economy</li>
+          <li>Public Policy</li>
+          <li>Political Ecology</li>
+          <li>International Law</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications">
+      <h2>Publications</h2>
+
+      <div class="publication-group">
+        <h3 class="subsection-title">Academic Publications</h3>
+
+        <div class="item">
+          <p>
+            Jobayer, A., &amp; Arifuzzaman, M. (2024).
+            <a
+              href="https://doi.org/10.34104/ajssls.024.047052"
+              target="_blank"
+              rel="noopener noreferrer"
+            ><em>The possible introduction of digital currency exchange in Bangladesh: A legal analysis.</em></a>
+            <em>Asian Journal of Social Sciences &amp; Legal Studies, 6</em>(2), 47–52.
+          </p>
+          <p class="publication-link">
+            <a href="https://doi.org/10.34104/ajssls.024.047052"
+               target="_blank" rel="noopener noreferrer">View publication ↗</a>
+          </p>
+        </div>
+
+        <div class="item">
+          <p>
+            Baidya, S., &amp; Jobayer, A. Book review: Sunita Narain,
+            <a
+              href="https://doi.org/10.1177/09722661261439478"
+              target="_blank"
+              rel="noopener noreferrer"
+            ><em>The Rise of the Neo-Locals: A Generational Reversal of Globalisation.</em></a>
+            <em>Review of Development and Change.</em>
+          </p>
+          <p class="publication-link">
+            <a href="https://doi.org/10.1177/09722661261439478"
+               target="_blank" rel="noopener noreferrer">View publication ↗</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="publication-group policy-articles">
+        <h3 class="subsection-title">Policy &amp; Opinion Articles</h3>
+        <p class="publication-intro">
+          Selected commentary on geopolitics, regional security, and environmental politics.
+        </p>
+
+        <div class="item">
+          <h3><a href="https://counterpointbd.com/when-are-they-going-home"
+            target="_blank" rel="noopener noreferrer">The Never-Ending Story</a></h3>
+          <p class="meta">Counterpoint · 2026</p>
+        </div>
+
+        <div class="item">
+          <h3><a href="https://counterpointbd.com/Looking-at-the-Saudi-Naval-Coalition-from-Bangladesh"
+            target="_blank" rel="noopener noreferrer">Looking at the Saudi Naval Coalition from Bangladesh</a></h3>
+          <p class="meta">Counterpoint · 2026</p>
+        </div>
+
+        <div class="item">
+          <h3><a href="https://counterpointbd.com/can-the-china-myanmar-bangladesh-economic-corridor-be-an-alternative-to-the-strait-of-malacca"
+            target="_blank" rel="noopener noreferrer">Can We Be an Alternative to the Strait of Malacca?</a></h3>
+          <p class="meta">Counterpoint · 2026</p>
+        </div>
+
+        <div class="item">
+          <h3><a href="https://counterpointbd.com/the-curious-history-of-the-china-corridor"
+            target="_blank" rel="noopener noreferrer">The Curious History of the China Corridor</a></h3>
+          <p class="meta">Counterpoint · 2026</p>
+        </div>
+
+        <div class="item">
+          <h3><a href="https://counterpointbd.com/Going-Green----From-Protest-to-Politics"
+            target="_blank" rel="noopener noreferrer">The History of Green Politics</a></h3>
+          <p class="meta">Counterpoint · 2026</p>
+        </div>
+
+        <div class="item">
+          <h3><a href="https://counterpointbd.com/Malaysia-First-Then-China"
+            target="_blank" rel="noopener noreferrer">Malaysia First, Then China</a></h3>
+          <p class="meta">Counterpoint · 2026</p>
+        </div>
+
+        <div class="item">
+          <h3><a href="https://chashmamagazine.substack.com/p/blowin-in-the-wind-just-dylan-and-db4"
+            target="_blank" rel="noopener noreferrer">Blowin’ in the Wind: Just Dylan &amp; The Politiks</a></h3>
+          <p class="meta">Chashma · 2026</p>
+        </div>
+
+        <div class="item">
+          <h3><a href="https://niice.org.np/archives/11644"
+            target="_blank" rel="noopener noreferrer">Caught in Limbo: The Anniversary of Rohingya Displacement</a></h3>
+          <p class="meta">NIICE · 2025</p>
+        </div>
+
+        <div class="item">
+          <h3><a href="https://refugeewatchonline.wordpress.com/2025/09/03/a-climate-prison-where-rohingya-refugees-struggle-only-to-survive/"
+            target="_blank" rel="noopener noreferrer">A Climate Prison: Where Rohingya Refugees Struggle Only to Survive</a></h3>
+          <p class="meta">Refugee Watch Online · 2025</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+      <h2>Experience</h2>
+
+      <div class="item">
+        <h3>Senior Officer (Research)</h3>
+        <p class="meta">MOMODa Foundation · Dhaka</p>
+        <p class="meta">18 March 2024 – 30 June 2024</p>
+        <p>
+          Worked on the D-Lab (Digital Lab Education) project, managing research
+          data, developing questionnaires for focus group discussions (FGDs) and
+          key informant interviews (KIIs), coordinating field visits, and
+          contributing to research reports and project documentation.
+        </p>
+      </div>
+
+      <div class="item">
+        <h3>Research Assistant (Intern)</h3>
+        <p class="meta">MOMODa Foundation · Dhaka</p>
+        <p class="meta">17 December 2023 – 16 March 2024</p>
+        <p>
+          Supported research and project coordination for the D-Lab initiative.
+          Assisted with proposal writing, research activities, and telephone
+          and field surveys to support data collection and project implementation.
+        </p>
+      </div>
+
+      <div class="item">
+        <h3>Research Intern</h3>
+        <p class="meta">Mission Green Bangladesh · Remote</p>
+        <p class="meta">15 October 2025 – 15 February 2026</p>
+        <p>
+          Contributed to the research project <em>“Deforestation for Survival:
+          The Environmental Cost of the Rohingya Settlements in Cox’s Bazar.”</em>
+          Coordinated team activities, collected secondary data and relevant
+          literature, and supported research documentation. Also contributed
+          op-eds to Prakrity Online.
+        </p>
+      </div>
+
+      <div class="item">
+        <h3>Legal Intern</h3>
+        <p class="meta">Law &amp; Jurist, District and Sessions Judge Court · Dhaka</p>
+        <p class="meta">1 March 2023 – 30 June 2023</p>
+        <p>
+          Conducted legal research and assisted in preparing court submissions,
+          case summaries, and background briefs. Supported case documentation
+          and the organisation of confidential legal records.
+        </p>
+      </div>
+
+      <div class="item">
+        <h3>Intern</h3>
+        <p class="meta">Center for Career Development &amp; Alumni Affairs, Green University of Bangladesh · Dhaka</p>
+        <p class="meta">5 July 2021 – 5 January 2022</p>
+        <p>
+          Supported administrative coordination by maintaining records and
+          alumni databases, assisting with event logistics, and contributing
+          to the organisation of workshops and university activities.
+        </p>
+      </div>
+
+      <div class="publication-group">
+        <h3 class="subsection-title">Leadership &amp; Activities</h3>
+
+        <div class="item">
+          <h3>Editor</h3>
+          <h3>Chashma Magazine</h3>
+          <p class="meta">
+            <em>(Student-led initiative, Department of International Relations, South Asian University, Delhi)</em>
+          </p>
+          <p class="meta">September 2025 – May 2026</p>
+        </div>
+
+        <div class="item">
+          <h3>President</h3>
+          <h3>Green University Debating Club (GUDC)</h3>
+          <p class="meta">September 2022 – October 2023</p>
+        </div>
+
+        <div class="item">
+          <h3>General Secretary</h3>
+          <h3>Green University Debating Club (GUDC)</h3>
+          <p class="meta">August 2021 – September 2022</p>
+        </div>
+
+        <div class="item">
+          <h3>Language &amp; Debate Secretary</h3>
+          <h3>Green University Law Club (GULC)</h3>
+          <p class="meta">August 2021 – September 2022</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <p>
+        <b>Research Methods:</b>
+        Qualitative Research · Content Analysis · Archival Research ·
+        Questionnaire Design
+      </p>
+      <p>
+        <b>Digital &amp; Analytical Tools:</b>
+        Python · R · STATA · SurveyCTO · Zotero · Mendeley
+      </p>
+      <p>
+        <b>Writing &amp; Communication:</b>
+        Academic Writing · Policy Writing · Research Documentation ·
+        Workshop Facilitation · Team Coordination
+      </p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        For research collaborations, academic discussions, writing,
+        or policy-related opportunities, feel free to get in touch.
+      </p>
+
+      <div class="contact-links">
+        <!-- Replace these placeholders with your actual details. -->
+        <a href="mailto:YOUR_EMAIL@example.com">Email</a>
+        <a href="https://www.linkedin.com/"
+           target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://scholar.google.com/"
+           target="_blank" rel="noopener noreferrer">Google Scholar</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="container">
+    <p>
+      © <span id="year"></span> Ahamed Jobayer. All rights reserved.
+    </p>
+  </footer>
+
+  <script>
+    const themeToggle = document.getElementById("themeToggle");
+    const savedTheme = localStorage.getItem("portfolio-theme");
+
+    if (savedTheme === "dark") {
+      document.documentElement.setAttribute("data-theme", "dark");
+    }
+
+    themeToggle.addEventListener("click", () => {
+      const isDark =
+        document.documentElement.getAttribute("data-theme") === "dark";
+
+      if (isDark) {
+        document.documentElement.removeAttribute("data-theme");
+        localStorage.setItem("portfolio-theme", "light");
+      } else {
+        document.documentElement.setAttribute("data-theme", "dark");
+        localStorage.setItem("portfolio-theme", "dark");
+      }
+    });
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+</body>
+</html>
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      min-height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 22px;
+      flex-wrap: wrap;
+      padding-block: 12px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .theme-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 40px;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      color: var(--text);
+      border-radius: 5px;
+      font: inherit;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .theme-toggle:hover {
+      background: var(--surface);
+    }
+
+    main {
+      padding-bottom: 60px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 245px minmax(0, 1fr);
+      align-items: start;
+      gap: 42px;
+      padding-block: 82px 72px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .portrait {
+      display: block;
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      height: auto;
+      object-fit: cover;
+      object-position: center 35%;
+      border-radius: 5px;
+      background: var(--surface);
+    }
+
+    h1 {
+      margin: 0 0 18px;
+      font-size: clamp(36px, 5vw, 54px);
+      line-height: 1.1;
+      letter-spacing: -2.5px;
+      font-weight: 750;
+    }
+
+    .focus {
+      margin: 0 0 24px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    .intro {
+      margin: 0 0 22px;
+      font-size: 16px;
+      line-height: 1.85;
+    }
+
+    .hero-links {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .hero-links a {
+      font-weight: 500;
+    }
+
+    section {
+      padding-block: 36px;
+      border-bottom: 1px solid var(--border);
+      scroll-margin-top: 80px;
+    }
+
+    h2 {
+      margin: 0 0 20px;
+      font-size: 21px;
+      letter-spacing: -0.6px;
+      line-height: 1.4;
+    }
+
+    h3 {
+      margin: 0 0 5px;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    .item {
+      margin-bottom: 24px;
+    }
+
+    .item:last-child {
+      margin-bottom: 0;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.8;
+      margin-bottom: 7px;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 0;
+      margin: 14px 0 0;
+      list-style: none;
+    }
+
+    .tag-list li {
+      padding: 4px 10px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .publication-group {
+      margin-bottom: 32px;
+    }
+
+    .publication-group:last-child {
+      margin-bottom: 0;
+    }
+
     .subsection-title {
       margin-bottom: 20px;
     }
