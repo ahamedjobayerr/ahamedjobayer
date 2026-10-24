@@ -1,4 +1,4 @@
-# Ahamed Jobayer — Academic Portfolio
+# Ahamed Jobayer — Portfolio
 
 A minimal, responsive academic portfolio built with plain HTML, CSS, and JavaScript. It defaults to a white background with black text and includes a theme toggle for black background with white text. The visitor's preference is saved in their browser.
 
