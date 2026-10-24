@@ -86,14 +86,22 @@
     }
 
     .theme-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 40px;
       border: 1px solid var(--border);
       background: var(--bg);
       color: var(--text);
       border-radius: 5px;
-      padding: 7px 12px;
       font: inherit;
-      font-size: 13px;
+      font-size: 18px;
       cursor: pointer;
+    }
+
+    .theme-toggle:hover {
+      background: var(--surface);
     }
 
     main {
@@ -155,6 +163,7 @@
     section {
       padding-block: 36px;
       border-bottom: 1px solid var(--border);
+      scroll-margin-top: 80px;
     }
 
     h2 {
@@ -185,6 +194,7 @@
     .meta {
       color: var(--muted);
       font-size: 14px;
+      line-height: 1.8;
       margin-bottom: 7px;
     }
 
@@ -203,17 +213,6 @@
       border-radius: 4px;
       font-size: 13px;
       color: var(--muted);
-    }
-
-    .personal-note {
-      background: var(--surface);
-      border-radius: 6px;
-      padding: 20px 22px;
-      margin-top: 20px;
-    }
-
-    .personal-note h3 {
-      margin-bottom: 8px;
     }
 
     footer {
@@ -240,6 +239,11 @@
 
       .nav a {
         font-size: 13px;
+      }
+
+      .theme-toggle {
+        width: 36px;
+        height: 36px;
       }
 
       .hero {
@@ -277,19 +281,25 @@
 <body>
   <header>
     <nav class="nav container" aria-label="Main navigation">
-      <a href="#about">About</a>
+      <a href="#education">Education</a>
       <a href="#research">Research</a>
       <a href="#writing">Writing</a>
       <a href="#experience">Experience</a>
       <a href="#contact">Contact</a>
-      <button class="theme-toggle" id="themeToggle"
-        type="button" aria-label="Switch colour theme">
-        ◐ Theme
-      </button>
+
+      <button
+        class="theme-toggle"
+        id="themeToggle"
+        type="button"
+        aria-label="Switch colour theme"
+        title="Switch colour theme"
+      >◐</button>
     </nav>
   </header>
 
   <main class="container">
+
+    <!-- Hero section -->
     <section class="hero" aria-labelledby="name">
       <div>
         <img
@@ -304,61 +314,49 @@
       <div>
         <h1 id="name">Ahamed Jobayer</h1>
 
-        <p class="focus">
-          Researcher
-        </p>
+        <p class="focus">Researcher</p>
 
         <p class="intro">
-          I bring an interdisciplinary perspective to understanding contemporary political and social realities, shaped by both the academic community I am part of and my experience in the non-profit development sector. I seek to connect critical inquiry with real-world challenges.  
-          <br>Beyond these, I enjoy photography, capturing overlooked details and discovering new perspectives in everyday life.</br>
+          I bring an interdisciplinary perspective to understanding
+          contemporary political and social realities, shaped by both
+          the academic community I am part of and my experience in the
+          non-profit development sector. I seek to connect critical
+          inquiry with real-world challenges. Beyond these, I enjoy
+          photography, capturing overlooked details and discovering
+          new perspectives in everyday life.
         </p>
 
         <div class="hero-links">
           <a href="#writing">Publications &amp; Writing ↓</a>
-          <!-- Add your CV file to the repository and update this link. -->
           <a href="CV.pdf" download>Download CV ↓</a>
         </div>
       </div>
     </section>
 
-    <section id="about">
-      <h2>About</h2>
-      <p>
-        I have an academic background in International Relations and Law,
-        with research interests spanning migration governance, security,
-        climate change, geopolitics, and political economy.
-      </p>
-      <p>
-        My work brings together qualitative research, policy analysis,
-        documentary research, and critical approaches to contemporary
-        political and social questions.
-      </p>
-
-      <div class="personal-note">
-        <h3>Beyond Research</h3>
-        <p>
-          Away from research and writing, I enjoy photography, capturing
-          overlooked details and finding subtle perspectives in the
-          everyday world.
-        </p>
-      </div>
-    </section>
-
+    <!-- Education section -->
     <section id="education">
       <h2>Education</h2>
 
       <div class="item">
         <h3>Master’s Degree in International Relations</h3>
-        <p class="meta">South Asian University, New Delhi · 2026</p>
+        <p class="meta">
+          South Asian University, New Delhi · 2026
+        </p>
         <p>
           Graduate study focused on international affairs, security,
           migration, and political analysis.
+        </p>
+        <p class="meta">
+          Thesis: <em>Rohingya At/As Risk in Bangladesh: Analyzing
+          Climate Discourse in Select Newspapers</em>
         </p>
       </div>
 
       <div class="item">
         <h3>Bachelor of Laws (LL.B. Honours)</h3>
-        <p class="meta">Green University of Bangladesh · 2023</p>
+        <p class="meta">
+          Green University of Bangladesh · 2023
+        </p>
         <p>
           Undergraduate legal education providing a foundation in law,
           legal reasoning, and policy-related questions.
@@ -366,9 +364,10 @@
       </div>
     </section>
 
+    <!-- Research interests -->
     <section id="research">
       <h2>Research Interests</h2>
-      
+
       <ul class="tag-list">
         <li>Refugee &amp; Migration Governance</li>
         <li>Security Studies</li>
@@ -380,6 +379,7 @@
       </ul>
     </section>
 
+    <!-- Publications and writing -->
     <section id="writing">
       <h2>Publications &amp; Writing</h2>
 
@@ -387,12 +387,13 @@
         <h3>
           A Climate Prison: Where Rohingya Refugees Struggle Only to Survive
         </h3>
-        <p class="meta">Refugee Watch Online · September 2025</p>
+        <p class="meta">
+          Refugee Watch Online · September 2025
+        </p>
         <p>
           An opinion piece exploring the environmental and political
           conditions affecting Rohingya refugees in Bangladesh.
         </p>
-        <!-- Add the article URL to the title when available. -->
       </div>
 
       <div class="item">
@@ -416,6 +417,7 @@
       </div>
     </section>
 
+    <!-- Research and work experience -->
     <section id="experience">
       <h2>Research &amp; Work Experience</h2>
 
@@ -450,26 +452,37 @@
       </div>
     </section>
 
+    <!-- Contact -->
     <section id="contact">
       <h2>Contact</h2>
+
       <p>
         For research collaborations, academic discussions, writing,
         or policy-related opportunities, feel free to get in touch.
       </p>
 
       <div class="contact-links">
-        <!-- Replace the placeholders with your actual profile URLs. -->
+        <!-- Replace these placeholders with your actual details. -->
         <a href="mailto:YOUR_EMAIL@example.com">Email</a>
-        <a href="https://www.linkedin.com/" target="_blank"
-           rel="noopener noreferrer">LinkedIn</a>
-        <a href="https://scholar.google.com/" target="_blank"
-           rel="noopener noreferrer">Google Scholar</a>
+        <a
+          href="https://www.linkedin.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >LinkedIn</a>
+        <a
+          href="https://scholar.google.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Google Scholar</a>
       </div>
     </section>
+
   </main>
 
   <footer class="container">
-    <p>© <span id="year"></span> Ahamed Jobayer. All rights reserved.</p>
+    <p>
+      © <span id="year"></span> Ahamed Jobayer. All rights reserved.
+    </p>
   </footer>
 
   <script>
