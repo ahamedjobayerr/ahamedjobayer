@@ -1,29 +1,30 @@
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Academic portfolio of Ahamed Jobayer, researcher in International Relations.">
-  <title>Ahamed Jobayer | Academic Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Academic portfolio of Ahamed Jobayer, researcher working on migration, security, climate change, geopolitics and political economy.">
+  <title>Ahamed Jobayer | Research Portfolio</title>
 
   <style>
     :root {
-      color-scheme: light;
       --bg: #ffffff;
-      --fg: #111111;
-      --muted: #5f5f5f;
-      --line: #e5e5e5;
-      --link: #111111;
+      --surface: #f7f7f5;
+      --text: #171717;
+      --muted: #666666;
+      --border: #e5e5e5;
+      --link: #222222;
+      --max-width: 1000px;
     }
 
-    html[data-theme="dark"] {
-      color-scheme: dark;
-      --bg: #000000;
-      --fg: #ffffff;
-      --muted: #c4c4c4;
-      --line: #393939;
-      --link: #ffffff;
+    [data-theme="dark"] {
+      --bg: #151515;
+      --surface: #202020;
+      --text: #f1f1f1;
+      --muted: #b0b0b0;
+      --border: #343434;
+      --link: #f1f1f1;
     }
 
     * {
@@ -32,199 +33,232 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 90px;
     }
 
     body {
       margin: 0;
       background: var(--bg);
-      color: var(--fg);
-      font: 16px/1.65 system-ui, -apple-system,
-        BlinkMacSystemFont, "Segoe UI", sans-serif;
-      transition: background-color .15s ease, color .15s ease;
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.8;
+      transition: background 0.2s, color 0.2s;
     }
 
     a {
       color: var(--link);
-      text-underline-offset: 3px;
+      text-underline-offset: 4px;
     }
 
     a:hover {
-      text-decoration-thickness: 2px;
+      opacity: 0.7;
     }
 
-    .wrap {
-      width: min(900px, calc(100% - 40px));
-      margin: 0 auto;
+    .container {
+      width: min(var(--max-width), calc(100% - 48px));
+      margin-inline: auto;
     }
 
     header {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      gap: 18px;
-      padding: 22px 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-      align-items: center;
-    }
-
-    nav a {
-      font-size: .9rem;
-      text-decoration: none;
-    }
-
-    button {
-      color: var(--fg);
+      position: sticky;
+      top: 0;
+      z-index: 10;
       background: var(--bg);
-      border: 1px solid var(--line);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      min-height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 22px;
+      flex-wrap: wrap;
+      padding-block: 12px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .theme-toggle {
+      border: 1px solid var(--border);
+      background: var(--bg);
+      color: var(--text);
       border-radius: 5px;
-      padding: 7px 11px;
-      cursor: pointer;
+      padding: 7px 12px;
       font: inherit;
-      font-size: .85rem;
+      font-size: 13px;
+      cursor: pointer;
     }
-
-    button:focus-visible,
-    a:focus-visible {
-      outline: 2px solid var(--fg);
-      outline-offset: 4px;
-    }
-
-    /* Profile section */
 
     main {
-      padding: 76px 0 58px;
+      padding-bottom: 60px;
     }
 
     .hero {
       display: grid;
-      grid-template-columns: 220px minmax(0, 1fr);
+      grid-template-columns: 245px minmax(0, 1fr);
       align-items: start;
-      gap: 38px;
+      gap: 42px;
+      padding-block: 82px 72px;
+      border-bottom: 1px solid var(--border);
     }
 
-    .profile-photo {
+    .portrait {
       display: block;
       width: 100%;
-      aspect-ratio: 4 / 5;
+      aspect-ratio: 3 / 4;
+      height: auto;
       object-fit: cover;
-      object-position: center;
-      border-radius: 6px;
-      border: 1px solid var(--line);
-    }
-
-    .eyebrow {
-      color: var(--muted);
-      font-size: .78rem;
-      letter-spacing: .09em;
-      text-transform: uppercase;
-      margin: 0 0 10px;
+      object-position: center 35%;
+      border-radius: 5px;
+      background: var(--surface);
     }
 
     h1 {
-      margin: 0 0 8px;
-      font-size: clamp(2.1rem, 5vw, 3.2rem);
-      line-height: 1.12;
-      letter-spacing: -.055em;
+      margin: 0 0 18px;
+      font-size: clamp(36px, 5vw, 54px);
+      line-height: 1.1;
+      letter-spacing: -2.5px;
+      font-weight: 750;
     }
 
-    .role {
-      margin: 0;
+    .focus {
+      margin: 0 0 24px;
       color: var(--muted);
-    }
-
-    .interests {
-      margin-top: 18px;
-      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.9;
     }
 
     .intro {
-      margin-top: 24px;
-      font-size: 1rem;
+      margin: 0 0 22px;
+      font-size: 16px;
+      line-height: 1.85;
     }
 
-    .quicklinks {
+    .hero-links {
       display: flex;
+      gap: 22px;
       flex-wrap: wrap;
-      gap: 18px;
-      margin-top: 22px;
+      margin-top: 20px;
+    }
+
+    .hero-links a {
+      font-weight: 500;
     }
 
     section {
-      padding: 30px 0;
-      border-top: 1px solid var(--line);
+      padding-block: 36px;
+      border-bottom: 1px solid var(--border);
     }
 
     h2 {
-      font-size: 1.15rem;
-      margin: 0 0 15px;
-      letter-spacing: -.02em;
+      margin: 0 0 20px;
+      font-size: 21px;
+      letter-spacing: -0.6px;
+      line-height: 1.4;
     }
 
     h3 {
-      font-size: 1rem;
-      margin: 0 0 3px;
+      margin: 0 0 5px;
+      font-size: 16px;
+      line-height: 1.5;
     }
 
     p {
-      margin: 0 0 12px;
+      margin: 0 0 14px;
     }
 
     .item {
-      margin: 0 0 23px;
+      margin-bottom: 24px;
+    }
+
+    .item:last-child {
+      margin-bottom: 0;
     }
 
     .meta {
       color: var(--muted);
-      font-size: .9rem;
+      font-size: 14px;
+      margin-bottom: 7px;
     }
 
-    ul {
-      padding-left: 20px;
-      margin: 8px 0 0;
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 0;
+      margin: 14px 0 0;
+      list-style: none;
     }
 
-    li {
-      margin: 0 0 7px;
+    .tag-list li {
+      padding: 4px 10px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .personal-note {
+      background: var(--surface);
+      border-radius: 6px;
+      padding: 20px 22px;
+      margin-top: 20px;
+    }
+
+    .personal-note h3 {
+      margin-bottom: 8px;
     }
 
     footer {
-      border-top: 1px solid var(--line);
-      padding: 22px 0 32px;
+      padding-block: 28px 38px;
       color: var(--muted);
-      font-size: .85rem;
+      font-size: 13px;
     }
 
-    @media (max-width: 600px) {
-      header {
-        justify-content: flex-start;
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    @media (max-width: 700px) {
+      .container {
+        width: min(100% - 36px, var(--max-width));
       }
 
-      nav {
-        gap: 12px;
+      .nav {
+        justify-content: center;
+        gap: 12px 18px;
       }
 
-      main {
-        padding-top: 42px;
+      .nav a {
+        font-size: 13px;
       }
 
       .hero {
         grid-template-columns: 1fr;
-        gap: 25px;
+        gap: 28px;
+        padding-block: 40px;
       }
 
-      .profile-photo {
-        width: 170px;
-        aspect-ratio: 1 / 1;
+      .portrait {
+        max-width: 220px;
       }
 
       h1 {
-        font-size: 2.35rem;
+        font-size: 40px;
+        letter-spacing: -1.7px;
+      }
+
+      section {
+        padding-block: 30px;
       }
     }
 
@@ -241,309 +275,240 @@
 </head>
 
 <body>
-  <div class="wrap">
+  <header>
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#writing">Writing</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+      <button class="theme-toggle" id="themeToggle"
+        type="button" aria-label="Switch colour theme">
+        ◐ Theme
+      </button>
+    </nav>
+  </header>
 
-    <header>
-      <nav aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#writing">Writing</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-        <button id="theme-toggle" type="button"
-          aria-label="Switch to black theme" aria-pressed="false">
-          ◐ Theme
-        </button>
-      </nav>
-    </header>
-
-    <main id="top">
-      <div class="hero">
-
-        <div>
-          <img
-            class="profile-photo"
-            src="ahamedjobayer.png"
-            alt="Ahamed Jobayer"
-            width="440"
-            height="550"
-          >
-        </div>
-
-        <div class="hero-content">
-          <p class="eyebrow">Academic portfolio</p>
-
-          <h1>Ahamed Jobayer</h1>
-
-          <p class="role">
-            Researcher in International Relations
-          </p>
-
-          <p class="interests">
-            Climate politics · Migration · Political economy ·
-            Security studies
-          </p>
-
-          <p class="intro">
-            I am a law and International Relations graduate with
-            experience in evidence-based policy research, qualitative
-            data synthesis, and bilingual writing. My academic work
-            has examined climate discourse and the Rohingya in
-            Bangladesh, alongside legal and policy questions.
-          </p>
-
-          <div class="quicklinks">
-            <a href="#writing">Publications and writing ↓</a>
-            <a href="assets/ahamed-jobayer-cv.docx" download>
-              Download CV ↓
-            </a>
-          </div>
-        </div>
-
+  <main class="container">
+    <section class="hero" aria-labelledby="name">
+      <div>
+        <img
+          class="portrait"
+          src="ahamedjobayer.png"
+          alt="Portrait of Ahamed Jobayer"
+          width="600"
+          height="800"
+        >
       </div>
-    </main>
+
+      <div>
+        <h1 id="name">Ahamed Jobayer</h1>
+
+        <p class="focus">
+          International Relations | Refugee &amp; Migration |
+          Security Studies | Climate Change | Geopolitics |
+          Political Economy | Public Policy
+        </p>
+
+        <p class="intro">
+          Bridging legal foundations with international affairs, I hold
+          a Master’s degree in International Relations and a Bachelor’s
+          degree in Law. My analytical focus lies at the intersection of
+          Refugee &amp; Migration governance, Security Studies, Geopolitics,
+          Climate Change, and Political Economy. Having worked as a
+          researcher in the non-profit development sector, I bring
+          practical experience in translating complex social issues into
+          impactful, community-focused outcomes. I am particularly
+          intrigued by how historical narratives and political perceptions
+          actively shape contemporary geopolitical realities.
+        </p>
+
+        <div class="hero-links">
+          <a href="#writing">Publications &amp; Writing ↓</a>
+          <!-- Add your CV file to the repository and update this link. -->
+          <a href="CV.pdf" download>Download CV ↓</a>
+        </div>
+      </div>
+    </section>
 
     <section id="about">
       <h2>About</h2>
       <p>
-        I completed an MA in International Relations at South Asian
-        University, New Delhi, and a Bachelor of Laws (LLB) at Green
-        University of Bangladesh. I received the SAARC Freeship
-        Scholarship for my postgraduate studies.
+        I have an academic background in International Relations and Law,
+        with research interests spanning migration governance, security,
+        climate change, geopolitics, and political economy.
       </p>
+      <p>
+        My work brings together qualitative research, policy analysis,
+        documentary research, and critical approaches to contemporary
+        political and social questions.
+      </p>
+
+      <div class="personal-note">
+        <h3>Beyond Research</h3>
+        <p>
+          Away from research and writing, I enjoy photography, capturing
+          overlooked details and finding subtle perspectives in the
+          everyday world.
+        </p>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+
+      <div class="item">
+        <h3>Master’s Degree in International Relations</h3>
+        <p class="meta">South Asian University, New Delhi</p>
+        <p>
+          Graduate study focused on international affairs, security,
+          migration, and political analysis.
+        </p>
+      </div>
+
+      <div class="item">
+        <h3>Bachelor of Laws (LL.B. Honours)</h3>
+        <p class="meta">Green University of Bangladesh · 2023</p>
+        <p>
+          Undergraduate legal education providing a foundation in law,
+          legal reasoning, and policy-related questions.
+        </p>
+      </div>
     </section>
 
     <section id="research">
-      <h2>Research</h2>
+      <h2>Research Interests</h2>
+      <p>
+        My research examines how political narratives, historical
+        classifications, and institutional practices shape contemporary
+        governance and international affairs.
+      </p>
 
-      <div class="item">
-        <h3>Master’s thesis</h3>
-        <p>
-          <em>
-            Rohingya At/As Risk in Bangladesh: Analyzing Climate
-            Discourse in Select Newspapers
-          </em>
-        </p>
-        <p class="meta">
-          MA in International Relations · South Asian University
-        </p>
-      </div>
-
-      <div class="item">
-        <h3>Deforestation for Survival</h3>
-        <p class="meta">
-          Mission Green Bangladesh · Research internship · 2025–2026
-        </p>
-        <p>
-          Research project on the environmental cost of Rohingya
-          settlements in Cox’s Bazar, involving literature review,
-          secondary data collection, documentation, and team coordination.
-        </p>
-      </div>
-
-      <div class="item">
-        <h3>The Digital Lab Access in Bangladesh (D-Lab)</h3>
-        <p class="meta">MOMODa Foundation · 2024</p>
-        <p>
-          Research support involving field surveys, questionnaires
-          for focus group discussions and key informant interviews,
-          field coordination, and documentation.
-        </p>
-      </div>
+      <ul class="tag-list">
+        <li>Refugee &amp; Migration Governance</li>
+        <li>Security Studies</li>
+        <li>Climate Change</li>
+        <li>Geopolitics</li>
+        <li>Political Economy</li>
+        <li>Public Policy</li>
+        <li>Political Ecology</li>
+      </ul>
     </section>
 
     <section id="writing">
-      <h2>Academic publications</h2>
+      <h2>Publications &amp; Writing</h2>
 
       <div class="item">
+        <h3>
+          A Climate Prison: Where Rohingya Refugees Struggle Only to Survive
+        </h3>
+        <p class="meta">Refugee Watch Online · September 2025</p>
         <p>
-          Jobayer, A., &amp; Arifuzzaman, M. (2024).
-          “The possible introduction of digital currency exchange in
-          Bangladesh: A legal analysis.”
-          <em>Asian Journal of Social Sciences &amp; Legal Studies, 6</em>(2),
-          47–52.
+          An opinion piece exploring the environmental and political
+          conditions affecting Rohingya refugees in Bangladesh.
         </p>
+        <!-- Add the article URL to the title when available. -->
+      </div>
+
+      <div class="item">
+        <h3>Book Review: The Rise of the Neo-Locals</h3>
+        <p class="meta">Review of Development and Change</p>
         <p>
-          <a href="https://doi.org/10.34104/ajssls.024.047052"
-             target="_blank" rel="noopener noreferrer">
-            Read article ↗
-          </a>
+          A review of Sunita Narain’s work on local politics and
+          environmental questions.
         </p>
       </div>
 
       <div class="item">
+        <h3>Articles, Commentary &amp; Policy Writing</h3>
         <p>
-          Baidya, S., &amp; Jobayer, A. Book review: Sunita Narain,
-          <em>The Rise of the Neo-Locals: A Generational Reversal
-          of Globalisation</em>.
-          <em>Review of Development and Change</em>.
+          Additional writing and commentary on political, environmental,
+          and international affairs.
         </p>
-        <p>
-          <a href="https://doi.org/10.1177/09722661261439478"
-             target="_blank" rel="noopener noreferrer">
-            Read book review ↗
-          </a>
+        <p class="meta">
+          Add your published article titles and links here.
         </p>
-      </div>
-
-      <h2 style="margin-top:28px">Policy and opinion writing</h2>
-
-      <div class="item">
-        <h3>Counterpoint (2026)</h3>
-        <ul>
-          <li>The Never-Ending Story</li>
-          <li>Looking at the Saudi Naval Coalition from Bangladesh</li>
-          <li>Can We Be an Alternative to the Strait of Malacca?</li>
-          <li>The Curious History of the China Corridor</li>
-          <li>The History of Green Politics</li>
-          <li>Malaysia First, Then China</li>
-        </ul>
-      </div>
-
-      <div class="item">
-        <h3>Other publications</h3>
-        <ul>
-          <li>
-            “Blowin’ in the Wind: Just Dylan &amp; The Politiks.”
-            <em>Chashma</em> (2026).
-          </li>
-          <li>
-            “Caught in Limbo: The Anniversary of Rohingya Displacement.”
-            NIICE (2025).
-          </li>
-          <li>
-            “A Climate Prison: Where Rohingya Refugees Struggle Only
-            to Survive.” <em>Refugee Watch Online</em> (2025).
-          </li>
-        </ul>
       </div>
     </section>
 
     <section id="experience">
-      <h2>Experience</h2>
+      <h2>Research &amp; Work Experience</h2>
 
       <div class="item">
-        <h3>Research Intern · Mission Green Bangladesh</h3>
-        <p class="meta">October 2025 – February 2026 · Remote</p>
+        <h3>Senior Officer (Research)</h3>
+        <p class="meta">MOMODa Foundation</p>
         <p>
-          Coordinated day-to-day research progress, conducted secondary
-          data collection and literature review, and authored op-eds
-          on refugee and climate issues for Prakrity Online.
+          Research data management, questionnaire development for focus
+          group discussions and key informant interviews, documentation,
+          and field visit coordination. Contributed to the D-Lab
+          digital education project.
         </p>
       </div>
 
       <div class="item">
-        <h3>Senior Officer (Research) · MOMODa Foundation</h3>
-        <p class="meta">March – June 2024 · Dhaka, Bangladesh</p>
+        <h3>Research Intern</h3>
+        <p class="meta">Mission Green Bangladesh</p>
         <p>
-          Managed research data, designed FGD and KII questionnaires,
-          coordinated field visits, and prepared reports and project
-          documentation.
+          Contributed to research on the environmental consequences of
+          Rohingya settlements in Cox’s Bazar, including literature
+          collection, documentation, and team coordination.
         </p>
       </div>
 
       <div class="item">
-        <h3>Research Assistant (Intern) · MOMODa Foundation</h3>
-        <p class="meta">December 2023 – March 2024 · Dhaka, Bangladesh</p>
+        <h3>Editor</h3>
+        <p class="meta">Chashma Magazine</p>
         <p>
-          Supported research management, proposal writing, project
-          coordination, and phone and field surveys.
+          Contributed to editorial planning, research-based writing,
+          and the publication of a student-led magazine.
         </p>
-      </div>
-
-      <div class="item">
-        <h3>Editor · Chashma Magazine</h3>
-        <p class="meta">
-          September 2025 – May 2026 · South Asian University
-        </p>
-      </div>
-
-      <div class="item">
-        <h3>Education</h3>
-        <p>
-          <strong>MA in International Relations</strong><br>
-          South Asian University, New Delhi, India · 2024–2026
-        </p>
-        <p>
-          <strong>Bachelor of Laws (LLB)</strong><br>
-          Green University of Bangladesh, Dhaka, Bangladesh · 2019–2023
-        </p>
-      </div>
-
-      <div class="item">
-        <h3>Awards</h3>
-        <ul>
-          <li>SAARC Freeship Scholarship, South Asian University (2024–2026)</li>
-          <li>Dean’s Certificate for Academic Excellence, Green University of Bangladesh (Summer 2022)</li>
-          <li>Champion, Debate for Democracy, UCB Public Parliament Debate Competition (May 2022)</li>
-          <li>CETL Brightest Mind Scholar, Green University of Bangladesh (Spring 2022)</li>
-        </ul>
       </div>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
       <p>
-        <a href="mailto:ahamedjobayerr@gmail.com">
-          ahamedjobayerr@gmail.com
-        </a>
+        For research collaborations, academic discussions, writing,
+        or policy-related opportunities, feel free to get in touch.
       </p>
-      <p class="meta">Manikganj, Bangladesh</p>
-      <p class="meta">
-        LinkedIn:
-        <a href="https://www.linkedin.com/in/ahamedjobayer/"
-           target="_blank" rel="noopener noreferrer">
-          in/ahamedjobayer ↗
-        </a>
-      </p>
+
+      <div class="contact-links">
+        <!-- Replace the placeholders with your actual profile URLs. -->
+        <a href="mailto:YOUR_EMAIL@example.com">Email</a>
+        <a href="https://www.linkedin.com/" target="_blank"
+           rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://scholar.google.com/" target="_blank"
+           rel="noopener noreferrer">Google Scholar</a>
+      </div>
     </section>
+  </main>
 
-    <footer>
-      © <span id="year"></span> Ahamed Jobayer
-    </footer>
-
-  </div>
+  <footer class="container">
+    <p>© <span id="year"></span> Ahamed Jobayer. All rights reserved.</p>
+  </footer>
 
   <script>
-    const root = document.documentElement;
-    const toggle = document.getElementById('theme-toggle');
+    const themeToggle = document.getElementById("themeToggle");
+    const savedTheme = localStorage.getItem("portfolio-theme");
 
-    const savedTheme = localStorage.getItem('aj-theme');
-
-    if (savedTheme === 'dark') {
-      root.dataset.theme = 'dark';
+    if (savedTheme === "dark") {
+      document.documentElement.setAttribute("data-theme", "dark");
     }
 
-    function updateToggle() {
-      const dark = root.dataset.theme === 'dark';
+    themeToggle.addEventListener("click", () => {
+      const isDark =
+        document.documentElement.getAttribute("data-theme") === "dark";
 
-      toggle.setAttribute('aria-pressed', String(dark));
-
-      toggle.setAttribute(
-        'aria-label',
-        dark ? 'Switch to white theme' : 'Switch to black theme'
-      );
-
-      toggle.textContent = dark ? '☼ Theme' : '◐ Theme';
-    }
-
-    toggle.addEventListener('click', () => {
-      const dark = root.dataset.theme !== 'dark';
-
-      if (dark) {
-        root.dataset.theme = 'dark';
+      if (isDark) {
+        document.documentElement.removeAttribute("data-theme");
+        localStorage.setItem("portfolio-theme", "light");
       } else {
-        delete root.dataset.theme;
+        document.documentElement.setAttribute("data-theme", "dark");
+        localStorage.setItem("portfolio-theme", "dark");
       }
-
-      localStorage.setItem('aj-theme', dark ? 'dark' : 'light');
-
-      updateToggle();
     });
 
-    updateToggle();
-
-    document.getElementById('year').textContent =
+    document.getElementById("year").textContent =
       new Date().getFullYear();
   </script>
 </body>
