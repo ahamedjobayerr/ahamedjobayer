@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Academic portfolio of Ahamed Jobayer, researcher in International Relations.">
+  <title>Ahamed Jobayer | Academic Portfolio</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #ffffff;
+      --fg: #111111;
+      --muted: #5f5f5f;
+      --line: #e5e5e5;
+      --link: #111111;
+    }
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #000000;
+      --fg: #ffffff;
+      --muted: #c4c4c4;
+      --line: #393939;
+      --link: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font: 16px/1.65 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      transition: background-color .15s ease, color .15s ease;
+    }
+    a { color: var(--link); text-underline-offset: 3px; }
+    a:hover { text-decoration-thickness: 2px; }
+    .wrap { width: min(760px, calc(100% - 40px)); margin: 0 auto; }
+    header {
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 18px; padding: 25px 0; border-bottom: 1px solid var(--line);
+    }
+    .brand { color: var(--fg); text-decoration: none; font-weight: 700; letter-spacing: -.03em; }
+    nav { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+    nav a { font-size: .9rem; text-decoration: none; }
+    button {
+      color: var(--fg); background: var(--bg); border: 1px solid var(--line);
+      border-radius: 999px; padding: 7px 11px; cursor: pointer; font: inherit;
+      font-size: .85rem;
+    }
+    button:focus-visible, a:focus-visible { outline: 2px solid var(--fg); outline-offset: 4px; }
+    main { padding: 62px 0 48px; }
+    .eyebrow { color: var(--muted); font-size: .78rem; letter-spacing: .09em; text-transform: uppercase; }
+    h1 { margin: 8px 0 4px; font-size: clamp(2.2rem, 6vw, 3.2rem); line-height: 1.12; letter-spacing: -.055em; }
+    .role { margin: 0; color: var(--muted); }
+    .interests { margin-top: 18px; color: var(--muted); }
+    .intro { max-width: 640px; margin-top: 28px; font-size: 1.05rem; }
+    .quicklinks { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 22px; }
+    section { padding: 30px 0; border-top: 1px solid var(--line); }
+    h2 { font-size: 1.15rem; margin: 0 0 15px; letter-spacing: -.02em; }
+    h3 { font-size: 1rem; margin: 0 0 3px; }
+    p { margin: 0 0 12px; }
+    .item { margin: 0 0 21px; }
+    .meta { color: var(--muted); font-size: .9rem; }
+    ul { padding-left: 20px; margin: 8px 0 0; }
+    li { margin: 0 0 7px; }
+    footer { border-top: 1px solid var(--line); padding: 22px 0 32px; color: var(--muted); font-size: .85rem; }
+    @media (max-width: 560px) {
+      header { align-items: flex-start; flex-direction: column; }
+      nav { gap: 12px; }
+      main { padding-top: 44px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      body { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="#top">AJ.</a>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#writing">Writing</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+        <button id="theme-toggle" type="button" aria-label="Switch to black theme" aria-pressed="false">◐ Theme</button>
+      </nav>
+    </header>
+
+    <main id="top">
+      <p class="eyebrow">Academic portfolio</p>
+      <h1>Ahamed Jobayer</h1>
+      <p class="role">Researcher in International Relations</p>
+      <p class="interests">Climate politics · Migration · Political economy · Security studies</p>
+      <p class="intro">I am a law and International Relations graduate with experience in evidence-based policy research, qualitative data synthesis, and bilingual writing. My academic work has examined climate discourse and the Rohingya in Bangladesh, alongside legal and policy questions.</p>
+      <div class="quicklinks">
+        <a href="#writing">Publications and writing ↓</a>
+        <a href="assets/ahamed-jobayer-cv.docx" download>Download CV ↓</a>
+      </div>
+    </main>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>I completed an MA in International Relations at South Asian University, New Delhi, and a Bachelor of Laws (LLB) at Green University of Bangladesh. I received the SAARC Freeship Scholarship for my postgraduate studies.</p>
+    </section>
+
+    <section id="research">
+      <h2>Research</h2>
+      <div class="item">
+        <h3>Master’s thesis</h3>
+        <p><em>Rohingya At/As Risk in Bangladesh: Analyzing Climate Discourse in Select Newspapers</em></p>
+        <p class="meta">MA in International Relations · South Asian University</p>
+      </div>
+      <div class="item">
+        <h3>Deforestation for Survival</h3>
+        <p class="meta">Mission Green Bangladesh · Research internship · 2025–2026</p>
+        <p>Research project on the environmental cost of Rohingya settlements in Cox’s Bazar, involving literature review, secondary data collection, documentation, and team coordination.</p>
+      </div>
+      <div class="item">
+        <h3>The Digital Lab Access in Bangladesh (D-Lab)</h3>
+        <p class="meta">MOMODa Foundation · 2024</p>
+        <p>Research support involving field surveys, questionnaires for focus group discussions and key informant interviews, field coordination, and documentation.</p>
+      </div>
+    </section>
+
+    <section id="writing">
+      <h2>Academic publications</h2>
+      <div class="item">
+        <p>Jobayer, A., &amp; Arifuzzaman, M. (2024). “The possible introduction of digital currency exchange in Bangladesh: A legal analysis.” <em>Asian Journal of Social Sciences &amp; Legal Studies, 6</em>(2), 47–52.</p>
+        <p><a href="https://doi.org/10.34104/ajssls.024.047052" target="_blank" rel="noopener noreferrer">Read article ↗</a></p>
+      </div>
+      <div class="item">
+        <p>Baidya, S., &amp; Jobayer, A. Book review: Sunita Narain, <em>The Rise of the Neo-Locals: A Generational Reversal of Globalisation</em>. <em>Review of Development and Change</em>.</p>
+        <p><a href="https://doi.org/10.1177/09722661261439478" target="_blank" rel="noopener noreferrer">Read book review ↗</a></p>
+      </div>
+
+      <h2 style="margin-top:28px">Policy and opinion writing</h2>
+      <div class="item">
+        <h3>Counterpoint (2026)</h3>
+        <ul>
+          <li>The Never-Ending Story</li>
+          <li>Looking at the Saudi Naval Coalition from Bangladesh</li>
+          <li>Can We Be an Alternative to the Strait of Malacca?</li>
+          <li>The Curious History of the China Corridor</li>
+          <li>The History of Green Politics</li>
+          <li>Malaysia First, Then China</li>
+        </ul>
+      </div>
+      <div class="item">
+        <h3>Other publications</h3>
+        <ul>
+          <li>“Blowin’ in the Wind: Just Dylan &amp; The Politiks.” <em>Chashma</em> (2026).</li>
+          <li>“Caught in Limbo: The Anniversary of Rohingya Displacement.” NIICE (2025).</li>
+          <li>“A Climate Prison: Where Rohingya Refugees Struggle Only to Survive.” <em>Refugee Watch Online</em> (2025).</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="item">
+        <h3>Research Intern · Mission Green Bangladesh</h3>
+        <p class="meta">October 2025 – February 2026 · Remote</p>
+        <p>Coordinated day-to-day research progress, conducted secondary data collection and literature review, and authored op-eds on refugee and climate issues for Prakrity Online.</p>
+      </div>
+      <div class="item">
+        <h3>Senior Officer (Research) · MOMODa Foundation</h3>
+        <p class="meta">March – June 2024 · Dhaka, Bangladesh</p>
+        <p>Managed research data, designed FGD and KII questionnaires, coordinated field visits, and prepared reports and project documentation.</p>
+      </div>
+      <div class="item">
+        <h3>Research Assistant (Intern) · MOMODa Foundation</h3>
+        <p class="meta">December 2023 – March 2024 · Dhaka, Bangladesh</p>
+        <p>Supported research management, proposal writing, project coordination, and phone and field surveys.</p>
+      </div>
+      <div class="item">
+        <h3>Editor · Chashma Magazine</h3>
+        <p class="meta">September 2025 – May 2026 · South Asian University</p>
+      </div>
+      <div class="item">
+        <h3>Education</h3>
+        <p><strong>MA in International Relations</strong><br>South Asian University, New Delhi, India · 2024–2026</p>
+        <p><strong>Bachelor of Laws (LLB)</strong><br>Green University of Bangladesh, Dhaka, Bangladesh · 2019–2023</p>
+      </div>
+      <div class="item">
+        <h3>Awards</h3>
+        <ul>
+          <li>SAARC Freeship Scholarship, South Asian University (2024–2026)</li>
+          <li>Dean’s Certificate for Academic Excellence, Green University of Bangladesh (Summer 2022)</li>
+          <li>Champion, Debate for Democracy, UCB Public Parliament Debate Competition (May 2022)</li>
+          <li>CETL Brightest Mind Scholar, Green University of Bangladesh (Spring 2022)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p><a href="mailto:ahamedjobayerr@gmail.com">ahamedjobayerr@gmail.com</a></p>
+      <p class="meta">Manikganj, Bangladesh</p>
+      <p class="meta">LinkedIn: <a href="https://www.linkedin.com/in/ahamedjobayer/" target="_blank" rel="noopener noreferrer">in/ahamedjobayer ↗</a></p>
+    </section>
+
+    <footer>© <span id="year"></span> Ahamed Jobayer</footer>
+  </div>
+  <script>
+    const root = document.documentElement;
+    const toggle = document.getElementById('theme-toggle');
+    const savedTheme = localStorage.getItem('aj-theme');
+    if (savedTheme === 'dark') root.dataset.theme = 'dark';
+    function updateToggle() {
+      const dark = root.dataset.theme === 'dark';
+      toggle.setAttribute('aria-pressed', String(dark));
+      toggle.setAttribute('aria-label', dark ? 'Switch to white theme' : 'Switch to black theme');
+      toggle.textContent = dark ? '☼ Theme' : '◐ Theme';
+    }
+    toggle.addEventListener('click', () => {
+      const dark = root.dataset.theme !== 'dark';
+      if (dark) root.dataset.theme = 'dark';
+      else delete root.dataset.theme;
+      localStorage.setItem('aj-theme', dark ? 'dark' : 'light');
+      updateToggle();
+    });
+    updateToggle();
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
